@@ -10,7 +10,13 @@
 string [] array = {"Hello", "2", "world", ":-)"};
 int count = 0;
 
+
 PrintArray(array);
+LengthNewArray(array);
+string [] arrayNew = new string [count];
+
+
+
 void PrintArray (string [] array)
 {
     string sep = " ";
@@ -21,4 +27,17 @@ void PrintArray (string [] array)
         sep = ", ";
     }
     Console.WriteLine($" ]");
+}
+
+int LengthNewArray(string [] array)
+{
+    
+    for (int i =0; i<array.Length; i++)
+    {
+        if (array[i].Length<=3)
+        {
+            count++;
+        }
+    }
+    return count;
 }
