@@ -14,7 +14,8 @@ int count = 0;
 PrintArray(array);
 LengthNewArray(array);
 string [] arrayNew = new string [count];
-
+RemakeArray(array, arrayNew);
+PrintArray(arrayNew);
 
 
 void PrintArray (string [] array)
@@ -40,4 +41,18 @@ int LengthNewArray(string [] array)
         }
     }
     return count;
+}
+
+void RemakeArray(string [] array,string [] arrayNew)
+{
+    
+    int j =0;
+    for (int i =0; i<array.Length; i++)
+    {
+        if (array[i].Length<=3)
+        {
+            arrayNew[j] = array[i];
+            j++;
+        }
+    }
 }
