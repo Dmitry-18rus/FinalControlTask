@@ -9,3 +9,16 @@
 
 string [] array = {"Hello", "2", "world", ":-)"};
 int count = 0;
+
+PrintArray(array);
+void PrintArray (string [] array)
+{
+    string sep = " ";
+    Console.Write ("[");
+    for (int i =0; i<array.Length; i++)
+    {
+        Console.Write(sep + array[i]);
+        sep = ", ";
+    }
+    Console.WriteLine($" ]");
+}
